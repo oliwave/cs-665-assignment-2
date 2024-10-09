@@ -19,15 +19,15 @@ https://github.com/oliwave/cs-665-assignment-2
 
 For each assignment, please answer the following:
 
-- Explain the level of flexibility in your implementation, including how new object types can be easily added or removed in the future.
+### Explain the level of flexibility in your implementation, including how new object types can be easily added or removed in the future.
   - The `Driver` abstract class enables the system to stay flexible by merely extending it like Van, Taxi, and Scooter (***`open-closed principle`***)
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
+### Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
   - Each class has one responsibility so it's simple to understand and maintain
   - To elaborate, the `DeliveryRequest` class only receives the order from `Shop` and broadcasts the information to drivers who registered
-- Describe how you have avoided duplicated code and why it is important.
+### Describe how you have avoided duplicated code and why it is important.
   - The `Shop` class is fully decoupled from the `Driver` so that it doesn't need to maintain a one-to-one relationship between each implementation of the `Driver` derived class
-- If applicable, mention any design patterns you have used and explain why they were
+### If applicable, mention any design patterns you have used and explain why they were
 chosen.
   - The implementation harnesses the power of Observer Pattern
   - This pattern is perfect for dealing with one-to-many relationships
