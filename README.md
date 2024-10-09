@@ -9,7 +9,7 @@
 # Assignment Overview
 Please add a paragraph or two overviewing the objectives of the assignment.
 
-> The goal of this project is to manage the state elegantly and ensure it is reference among objects in a well-designed fashion, thereby preventing us from passing the states and achieving low coupling. 
+> The goal of this project is to manage the state elegantly and ensure it is referenced among objects in a well-designed fashion, thereby preventing us from passing the states and achieving low coupling. 
 
 # GitHub Repository Link:
 https://github.com/oliwave/cs-665-assignment-2
@@ -20,18 +20,18 @@ https://github.com/oliwave/cs-665-assignment-2
 For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can be easily added or removed in the future.
-  - The `Driver` abstract class enables the system to stay flexilble by merely extending it like Van, Taxi, and Scooter (***`open-closed principle`***)
+  - The `Driver` abstract class enables the system to stay flexible by merely extending it like Van, Taxi, and Scooter (***`open-closed principle`***)
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
-  - Each class has one reponsibility so it's simple to understand and maintain
+  - Each class has one responsibility so it's simple to understand and maintain
   - To elaborate, the `DeliveryRequest` class only receives the order from `Shop` and broadcasts the information to drivers who registered
 - Describe how you have avoided duplicated code and why it is important.
-  - The `Shop` class is fully decoupled from the `Driver` so that it doesn't need to maintain one-to-one replationship between each implementation of the `Driver` derived class
+  - The `Shop` class is fully decoupled from the `Driver` so that it doesn't need to maintain a one-to-one relationship between each implementation of the `Driver` derived class
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
-  - The implemenation harnesses the power of Oberser Pattern
-  - This pattern is perfect at dealing with one-to-many relationships
-  - Now, the `Shop` can send the item without knowing the detail of the `Driver`'s message (context). To be more specific, the relationship is decoupled by the `DeliverRequest` acting as Subject and other `Driver`s acting as Observer
+  - The implementation harnesses the power of Observer Pattern
+  - This pattern is perfect for dealing with one-to-many relationships
+  - Now, the `Shop` can send the item without knowing the details of the `Driver`'s message (context). To be more specific, the relationship is decoupled by the `DeliverRequest` acting as the Subject and the other `Driver`s acting as the Observer
   - As a result, we can add as many `Driver`s as we want without refactoring either the `Shop` or `DeliverReqeust`
 
 # Maven Commands
